@@ -11,15 +11,27 @@
         android:id="@+id/ivCamera"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
-        android:background="@color/camera_color"/>
+        android:background="@color/camera_color"
+        android:layout_centerInParent="true"/>
 
     <RelativeLayout
         android:id="@+id/rlTop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true">
+
+        <Spinner
+            android:id="@+id/spRatio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:spinnerMode="dropdown"
+            android:popupBackground="@android:color/transparent"
+            android:background="@android:color/transparent"
+            android:dropDownVerticalOffset="80dp"/>
 
         <LinearLayout
             android:layout_width="33dp"
@@ -55,7 +67,8 @@
         android:orientation="vertical"
         android:layout_below="@+id/rlTop"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp">
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="-7dp">
 
         <ImageView
             android:layout_width="35dp"
