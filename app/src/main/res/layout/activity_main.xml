@@ -153,6 +153,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvPhoto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
@@ -162,6 +163,7 @@
                 android:textAllCaps="true"/>
 
             <TextView
+                android:id="@+id/tvVideo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"

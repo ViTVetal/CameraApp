@@ -1,6 +1,7 @@
 package com.app.camera.cameraapp.ui.activities;
 
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -16,9 +17,12 @@ import com.app.camera.cameraapp.ui.views.ImageView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.tvScale) TextView tvScale;
+    @BindView(R.id.tvPhoto) TextView tvPhoto;
+    @BindView(R.id.tvVideo) TextView tvVideo;
 
     @BindView(R.id.ivCamera) ImageView ivCamera;
 
@@ -85,5 +89,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         ivCamera.requestLayout();
+    }
+
+    @OnClick(R.id.tvPhoto)
+    public void selectPhotoMode() {
+        tvPhoto.setTextColor(ContextCompat.getColor(this, R.color.text_selector_color));
+        tvVideo.setTextColor(ContextCompat.getColor(this, R.color.white));
+    }
+
+    @OnClick(R.id.tvVideo)
+    public void selectVideoMode() {
+        tvPhoto.setTextColor(ContextCompat.getColor(this, R.color.white));
+        tvVideo.setTextColor(ContextCompat.getColor(this, R.color.text_selector_color));
     }
 }
