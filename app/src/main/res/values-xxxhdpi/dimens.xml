@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_icons_size">38dp</dimen>
+    <dimen name="photos_size">38dp</dimen>
+    <dimen name="shutter_size">90dp</dimen>
+    <dimen name="rotate_camera_size">38dp</dimen>
+</resources>

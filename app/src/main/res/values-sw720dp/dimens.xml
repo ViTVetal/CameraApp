@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mode_text_size">17sp</dimen>
+
+    <dimen name="small_icons_size">40dp</dimen>
+</resources>

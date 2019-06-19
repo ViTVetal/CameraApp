@@ -4,8 +4,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:paddingTop="3dp"
-    android:paddingBottom="3dp">
+    android:paddingTop="@dimen/padding_xxsmall"
+    android:paddingBottom="@dimen/padding_xxsmall">
     <LinearLayout
         android:id="@+id/llDropDown"
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
-            android:textSize="12sp"/>
+            android:textSize="@dimen/ratio_drop_down_text_size"/>
 
     </LinearLayout>
 </LinearLayout>

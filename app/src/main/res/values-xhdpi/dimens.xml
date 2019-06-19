@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_icons_size">35dp</dimen>
+
+    <dimen name="small_icon_margin">12dp</dimen>
+    <dimen name="utils_top_margin">-7dp</dimen>
+</resources>
