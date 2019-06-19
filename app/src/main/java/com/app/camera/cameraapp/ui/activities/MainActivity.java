@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.app.camera.cameraapp.R;
 import com.app.camera.cameraapp.ui.adapters.RatioAdapter;
-import com.app.camera.cameraapp.ui.views.ImageView;
+import com.app.camera.cameraapp.ui.views.CameraView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.tvPhoto) TextView tvPhoto;
     @BindView(R.id.tvVideo) TextView tvVideo;
 
-    @BindView(R.id.ivCamera) ImageView ivCamera;
+    @BindView(R.id.ivCamera) CameraView ivCamera;
 
     @BindView(R.id.spRatio) Spinner spRatio;
 

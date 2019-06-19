@@ -15,25 +15,25 @@ import java.text.DecimalFormat;
  * Created by vit-vetal- on 18.06.19.
  */
 
-public class ImageView extends android.support.v7.widget.AppCompatImageView {
+public class CameraView extends android.support.v7.widget.AppCompatImageView {
     private ScaleGestureDetector mScaleDetector;
     private float mScaleFactor = 1.f;
 
     private TextView tvScaleFactor;
 
-    public ImageView(Context context) {
+    public CameraView(Context context) {
         super(context);
 
         mScaleDetector = new ScaleGestureDetector(context, new ScaleListener());
     }
 
-    public ImageView(Context context, @Nullable AttributeSet attrs) {
+    public CameraView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
         mScaleDetector = new ScaleGestureDetector(context, new ScaleListener());
     }
 
-    public ImageView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public CameraView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         mScaleDetector = new ScaleGestureDetector(context, new ScaleListener());

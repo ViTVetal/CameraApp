@@ -10,6 +10,7 @@ import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import com.app.camera.cameraapp.R;
+import com.app.camera.cameraapp.utils.Converter;
 
 /**
  * Created by vit-vetal- on 18.06.19.
@@ -48,27 +49,7 @@ public class RatioAdapter extends BaseAdapter implements SpinnerAdapter {
 
         LinearLayout llMain = (LinearLayout) view.findViewById(R.id.llMain);
 
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(dpToPx(45, context), 0);
-
-        switch (ratio[position]) {
-            case "9:16":
-                params.height = (int) ((double) params.width / 9 * 16);
-                break;
-            case "2:3":
-                params.height = (int) ((double) params.width / 2 * 3);
-                break;
-            case "3:4":
-                params.height = (int) ((double) params.width / 3 * 4);
-                break;
-            case "4:5":
-                params.height = (int) ((double) params.width / 4 * 5);
-                break;
-            case "1:1":
-                params.height = params.width;
-                break;
-        }
-
-        llMain.setLayoutParams(params);
+        llMain.setLayoutParams(getLinearLayoutParams(ratio[position]));
 
         return view;
     }
@@ -76,14 +57,21 @@ public class RatioAdapter extends BaseAdapter implements SpinnerAdapter {
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent) {
         View view = View.inflate(context, R.layout.ratio_dropdown, null);
+
         final TextView tvDropdown = (TextView) view.findViewById(R.id.tvDropdown);
         tvDropdown.setText(ratio[position]);
 
         LinearLayout llDropDown = (LinearLayout) view.findViewById(R.id.llDropDown);
 
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(dpToPx(45, context), 0);
+        llDropDown.setLayoutParams(getLinearLayoutParams(ratio[position]));
 
-        switch (ratio[position]) {
+        return view;
+    }
+
+    private LinearLayout.LayoutParams getLinearLayoutParams(String ratio) {
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(Converter.dpToPx(45, context), 0);
+
+        switch (ratio) {
             case "9:16":
                 params.height = (int) ((double) params.width / 9 * 16);
                 break;
@@ -101,14 +89,6 @@ public class RatioAdapter extends BaseAdapter implements SpinnerAdapter {
                 break;
         }
 
-        llDropDown.setLayoutParams(params);
-
-        return view;
-    }
-
-    private int dpToPx(int dp, Context context) {
-        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
-        int px = Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
-        return px;
+        return params;
     }
 }

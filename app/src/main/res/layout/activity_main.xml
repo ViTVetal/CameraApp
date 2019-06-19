@@ -7,7 +7,7 @@
     tools:context="com.app.camera.cameraapp.ui.activities.MainActivity"
     android:background="@color/black">
 
-    <com.app.camera.cameraapp.ui.views.ImageView
+    <com.app.camera.cameraapp.ui.views.CameraView
         android:id="@+id/ivCamera"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
